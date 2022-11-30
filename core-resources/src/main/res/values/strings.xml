@@ -1,0 +1,53 @@
+<resources>
+    <string name="splash_text">Ecommerce\nConcept</string>
+    <string name="geoposition_title">Zihuatanejo, Gro</string>
+    <string name="select_category">Select Category</string>
+    <string name="view_all">view all</string>
+    <string name="search">search</string>
+    <string name="hot_sales">Hot sales</string>
+    <string name="see_more">see more</string>
+    <string name="new_hotsales">New</string>
+    <string name="filter_options">Filter options</string>
+    <string name="done">Done</string>
+    <string name="brand_title">Brand</string>
+    <string name="price_title">Price</string>
+    <string name="size_title">Size</string>
+    <string name="phone_price">$ %1$s</string>
+    <string name="phone_price_us">$ %1$s us</string>
+    <string name="product_details">Product Details</string>
+    <string name="add_to_cart_button">Add to cart</string>
+    <string name="select_color_and_capacity">Select color and capacity</string>
+    <string name="shop">Shop</string>
+    <string name="details">Details</string>
+    <string name="features">Features</string>
+    <string name="phone_capacity">%1$s GB</string>
+    <string name="add_address">Add address</string>
+    <string name="my_cart">My Cart</string>
+    <string name="checkout">Checkout</string>
+    <string name="total">Total</string>
+    <string name="delivery">Delivery</string>
+    <string name="explorer">Explorer</string>
+
+
+    <string-array name="brands">
+        <item>Samsung</item>
+        <item>Nokia</item>
+        <item>Siemens</item>
+        <item>Sonny Ericsson</item>
+        <item>Xiaomi</item>
+    </string-array>
+
+    <string-array name="price">
+        <item>$50 - $299</item>
+        <item>$300 - $499</item>
+        <item>$500 - $699</item>
+        <item>$700 - $999</item>
+    </string-array>
+
+    <string-array name="size">
+        <item>4 to 4.5 inches</item>
+        <item>4.7 to 5.5 inches</item>
+        <item>6.0 to 6.5 inches</item>
+    </string-array>
+
+</resources>

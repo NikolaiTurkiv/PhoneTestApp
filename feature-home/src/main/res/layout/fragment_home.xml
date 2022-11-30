@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_gray"
+    tools:context=".HomeFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="90dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/include_explorer_lt"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/include"
+                layout="@layout/geoposition_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/select_category_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="14dp"
+                android:fontFamily="@font/mark_pro_bold"
+                android:text="@string/select_category"
+                android:textColor="@color/main_dark_blue"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/include" />
+
+            <TextView
+                android:id="@+id/view_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="34dp"
+                android:fontFamily="@font/mark_pro"
+                android:text="@string/view_all"
+                android:textColor="@color/main_orange"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/select_category_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/select_category_title" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/select_categories_fragment"
+                android:name="com.test.feature_select_category.SelectCategoryFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/select_category_title"
+                tools:layout="@layout/select_category_item" />
+
+            <EditText
+                android:id="@+id/main_search"
+                android:layout_width="0dp"
+                android:layout_height="34dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginStart="32dp"
+                android:background="@drawable/white_rectangle"
+                android:drawableStart="@drawable/search"
+                android:drawablePadding="12dp"
+                android:fontFamily="@font/mark_pro"
+                android:gravity="start|center"
+                android:hint="@string/search"
+                android:paddingStart="24dp"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/view_all"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/select_categories_fragment"
+                tools:ignore="Autofill,TextFields" />
+
+            <include
+                layout="@layout/circle_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                app:layout_constraintBottom_toBottomOf="@+id/main_search"
+                app:layout_constraintStart_toEndOf="@+id/main_search"
+                app:layout_constraintTop_toTopOf="@+id/main_search" />
+
+            <TextView
+                android:id="@+id/hot_sales"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hot_sales"
+                android:fontFamily="@font/mark_pro_bold"
+                android:textSize="25sp"
+                android:textColor="@color/main_dark_blue"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/main_search" />
+
+            <TextView
+                android:id="@+id/see_more_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/see_more"
+                android:fontFamily="@font/mark_pro"
+                android:textColor="@color/main_orange"
+                android:textSize="15sp"
+                android:layout_marginEnd="33dp"
+                app:layout_constraintBottom_toBottomOf="@+id/hot_sales"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/hot_sales" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/hotsales_fragment"
+                android:name="com.test.feature_hotsales.HotSalesFragment"
+                android:layout_width="match_parent"
+                android:layout_marginTop="12dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/hot_sales"
+                tools:layout="@layout/fragment_hot_sales" />
+
+            <TextView
+                android:id="@+id/best_seller_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/mark_pro_bold"
+                android:text="Best Seller"
+                android:textColor="@color/main_dark_blue"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/hotsales_fragment" />
+
+            <TextView
+                android:id="@+id/see_more_bestseller"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="33dp"
+                android:fontFamily="@font/mark_pro"
+                android:text="@string/see_more"
+                android:textColor="@color/main_orange"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/best_seller_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/best_seller_title" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/best_seller_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp"
+                android:layout_marginBottom="18dp"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintBottom_toTopOf="@+id/include_explorer_lt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/best_seller_title"
+                app:spanCount="2"
+                tools:listitem="@layout/best_seller_item" />
+
+            <include
+                android:id="@+id/filters_layout"
+                layout="@layout/filters_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hotsales_fragment" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <include
+        android:id="@+id/include_explorer_lt"
+        layout="@layout/explorer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

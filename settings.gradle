@@ -1,0 +1,27 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+  //  repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "TestApp"
+include ':app'
+include ':core-api'
+include ':core-db'
+include ':core-resources'
+include ':repository-phones'
+include ':feature-splash'
+include ':lib-android-utils'
+include ':feature-home'
+include ':feature-select-category'
+include ':feature-hotsales'
+include ':featue-phone-detail'
+include ':feature-my-cart'

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/transparent"
+    android:layout_width="wrap_content"
+    app:cardCornerRadius="50dp"
+    android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/hotsales_background"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/orange_circle"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/new_hotsales"
+            android:textSize="11sp"
+            android:textColor="@color/main_white"
+            android:fontFamily="@font/mark_pro_bold"
+            app:layout_constraintBottom_toBottomOf="@+id/hotsales_background"
+            app:layout_constraintEnd_toEndOf="@+id/hotsales_background"
+            app:layout_constraintStart_toStartOf="@+id/hotsales_background"
+            app:layout_constraintTop_toTopOf="@+id/hotsales_background" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
